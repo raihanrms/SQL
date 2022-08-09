@@ -1,10 +1,12 @@
 ### Practing SQL
 
-> SQL practice on Microsoft SQL Server Management Studio
+> SQL practice on Microsoft SQL Server Management Studio  
+
 Script folder [SQLQueries](https://github.com/raihanrms/SQL/tree/main/SQLQueries)
 
 `Note: Will upload the data later`
----
+
+
 
 
 #### Time spent messing with sql queries
