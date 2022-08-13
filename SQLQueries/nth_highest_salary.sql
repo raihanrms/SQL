@@ -27,8 +27,11 @@ with result1 as -- make the Employees a cte
 	select Salary, DENSE_RANK() over (order by Salary desc) as denserank
 	from Employees 
 )
-select top 1 Salary from result1 where result1.denserank = 2
--- 3rd highest salary 
--- select top 1 Salary from result1 where result1.denserank = 3
+select top 1 Salary from result1 where result1.denserank = N -- replace N for the any nth number
+
+/* Note: using it with row_number function will
+work when there is no duplicate data.
+We can use distinct function to solve that.
+*/
 
 -- any other highest salary
