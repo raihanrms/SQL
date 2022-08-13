@@ -14,5 +14,9 @@ from Employees order by Salary desc)
 Result Order by Salary
 
 -- nth highest salary using cte (common table expression)
+-- rank the rows 
+-- on this result set we applied a rank
+select Salary DENSE_RANK() over (order by Salary desc) as denserank
+from Employees 
 
 -- any other highest salary
