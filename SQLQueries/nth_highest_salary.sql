@@ -13,10 +13,22 @@ select top 1 Salary from
 from Employees order by Salary desc)
 Result Order by Salary
 
+/* SQL Server utilities interpret GO 
+as a signal that they should send the 
+current batch of Transact-SQL statements 
+to an instance of SQL Server
+*/
+go
+
 -- nth highest salary using cte (common table expression)
--- rank the rows 
--- on this result set we applied a rank
-select Salary DENSE_RANK() over (order by Salary desc) as denserank
-from Employees 
+with result1 as -- make the Employees a cte
+(
+	-- on this result set we applied a rank
+	select Salary, DENSE_RANK() over (order by Salary desc) as denserank
+	from Employees 
+)
+select top 1 Salary from result1 where result1.denserank = 2
+-- 3rd highest salary 
+-- select top 1 Salary from result1 where result1.denserank = 3
 
 -- any other highest salary
