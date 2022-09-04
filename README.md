@@ -4,7 +4,7 @@
 
 Script folder [SQLQueries](https://github.com/raihanrms/SQL/tree/main/SQLQueries)
 
-`Note: Will upload the data later`
+`Note: Check the respective folders!`
 
 
 
